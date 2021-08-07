@@ -2,6 +2,8 @@
 
 #Update RPi
     sudo apt update && sudo apt upgrade -y
+#Install unzip
+    sudo apt-get install -y unzip
 #Configure Locale
     sudo apt-get install -y locales
     sudo sed -i "s/# en_US.UTF-8/en_US.UTF-8/g" /etc/locale.gen
