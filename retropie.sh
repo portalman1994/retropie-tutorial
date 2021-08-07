@@ -11,7 +11,8 @@
 #Configure Memory Split
     sudo sed -i 's/.*gpu_mem.*/gpu_mem=256/' /boot/config.txt
 #Install RetroPie
-    sudo apt install git lsb-release
+    sudo apt install -y git 
+    sudo apt install -y lsb-release
     cd
     git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
     cd RetroPie-Setup
