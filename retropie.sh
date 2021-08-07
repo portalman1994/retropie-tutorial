@@ -1,22 +1,5 @@
 #!/bin/bash
 
-#Configure WiFi
-    sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
-    sudo touch /etc/wpa_supplicant/wpa_supplicant.conf
-    echo "ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    echo "update_config=1" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    echo "country=US" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    echo "" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    echo "network={" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    echo '  ssid=""' | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    echo '  psk=""' | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    echo "}" | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
-    read -p "Please specify the Wireless Network SSID: " SSID
-    echo "$SSID"
-    sudo sed -i -e"s/^.*ssid=.*/    ssid=\"$SSID\"/" /etc/wpa_supplicant/wpa_supplicant.conf  
-    read -p "Please specify the Wireless Network Password: " WIFIPASS
-    echo "$WIFIPASS"
-    sudo sed -i -e"s/^.*psk=.*/    psk=\"$WIFIPASS\"/" /etc/wpa_supplicant/wpa_supplicant.conf
 #Update RPi
     sudo apt update && sudo apt upgrade -y
 #Configure Locale
