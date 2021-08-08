@@ -1,5 +1,5 @@
 # retropie-tutorial
-Configure your WiFi:
+## Configure your WiFi:
 https://www.raspberrypi.org/documentation/configuration/wireless/desktop.md
 
 ## Download the Scripts:
